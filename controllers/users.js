@@ -52,10 +52,14 @@ module.exports = {
 			// if there's no user or the password is invalid
 			if(!user || !user.validPassword(req.body.password)) {
 				// deny access
+				
 				return res.json({success: false, message: "Invalid credentials."})
 			}
 
 			const token = signToken(user)
+			
+			req.session.user = user
+			console.log('this is the req.user', req.user)
 			res.json({success: true, message: "Token attached.", token})
 		})
 	}

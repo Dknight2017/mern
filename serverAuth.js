@@ -1,7 +1,6 @@
 const
 	jwt = require('jsonwebtoken'),
 	User = require('./models/User.js')
-
 // function for creating tokens
 function signToken(user) {
 	// toObject() returns a basic js object with only the info from the db
@@ -25,7 +24,7 @@ function verifyToken(req, res, next) {
 			// if no user, deny access
 			if(!user) return res.json({success: false, message: "Invalid token."})
 			// otherwise, add user to req object
-			req.user = user
+			req.locals.user = user
 			// go on to process the route:
 			next()
 		})
