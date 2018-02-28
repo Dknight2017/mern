@@ -3,7 +3,7 @@ const Exercise = require('../models/Exercise.js')
 module.exports = {
 	// list all the exercises
 	index: (req, res) => {
-        
+        console.log("this is the session", res.session)
 		Exercise.find(({by: req.session.user._id}), (err, allDatUsersExercises) => {
 			res.json(allDatUsersExercises) ////////
 		})
