@@ -30,8 +30,5 @@ Although; I figured out how to allow a user to create, edit, and destroy a meal.
 
 Heroku Link
 
-[https://desolate-tor-73175.herokuapp.com](https://desolate-tor-73175.herokuapp.com)
+[https://workout-portal.herokuapp.com](https://workout-portal.herokuapp.com)
 
-Trello Board
-
-[https://trello.com/b/Vx9RELaf/wdi-project-2](https://trello.com/b/Vx9RELaf/wdi-project-2)
