@@ -21,7 +21,7 @@ module.exports = {
 	// create a new exercise
 	create: (req, res) => {
         console.log(req.body)
-		Exercise.create({...req.body, by: req.user }, (err, exercise) => {
+		Exercise.create({...req.body, by: req.session.user._id }, (err, exercise) => {
             if(err) return res.json({success: false, code: err.code})
             res.json(exercise)
 		})

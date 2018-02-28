@@ -4,6 +4,7 @@ const // excercise Schema tells db what to look for
         exerciseName: {type: String },
         setAmount: { type: Number },
         repAmount: { type: Number },
+        by:  [mongoose.Schema.Types.ObjectId] 
     })
 
 const Exercise = mongoose.model('Exercise', exerciseSchema)
